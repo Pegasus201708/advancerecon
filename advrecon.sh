@@ -280,9 +280,24 @@ echo "${red} DOMAIN SCRAPING END...${reset}"
 
 echo "{RED}TAKING SNAP:---~~-~-~-~-~-~-~-~-"
 echo "[::-*-::] Running Eyewitness...[::-*-::]"
-eyewitness -f ./$domain/$foldername/urllist.txtt -d ./$domain/$foldername/$domain
+eyewitness -f ./$domain/$foldername/urllist.txt -d ./$domain/$foldername/$domain
 chmod 777 ./$domain/$foldername/$domain
 mv ./$domain/$foldername/$domain ./$domain/$foldername/eyewitness/$domain
 
 
+#-----------------------------------------------------
+#checking status code and shorting in different list
+#-----------------------------------------------------
+bash ~/tools/scriptlists/status.sh urllist.txt
 
+#-------------------------------------
+#BYPASSING 403 FORBIDDEN 
+#-------------------------------------
+bash ~/tools/scriptlists/403.sh forbidden.txt > ./$domain/$foldername/403_bypass_test.txt
+
+
+#-------------------------------------
+# xml-rpc checking 
+#-------------------------------------
+
+bash ~/tools/scriptlists/xml_finder.sh
