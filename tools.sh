@@ -162,7 +162,7 @@ echo "done"
 
 
 #importing scripts
-https://github.com/Pegasus201708/scriptlists.git
+git clone https://github.com/Pegasus201708/scriptlists.git
 cd ~/tools/scriptlists
 chmod 777 chmod.sh
 bash chmod.sh
