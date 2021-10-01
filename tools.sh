@@ -157,4 +157,14 @@ echo "done"
 #installing massdns scriptlist
 echo "downloading massdns "
 git clone https://github.com/blechschmidt/massdns.git
+cd ~/tools/
+echo "done"
+
+
+#importing scripts
+https://github.com/Pegasus201708/scriptlists.git
+cd ~/tools/scriptlists
+chmod 777 chmod.sh
+bash chmod.sh
+cd ~/tools/
 echo "done"
