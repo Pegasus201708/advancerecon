@@ -2,7 +2,7 @@
    
 sudo apt-get -y update
 sudo apt-get -y upgrade
-
+sudo apt-get install figlet -y
 sudo apt-get install sublist3r -y
 sudo apt-get install subfinder -y
 
