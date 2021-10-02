@@ -1,11 +1,9 @@
 #!/bin/bash
-   
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get install figlet -y
-sudo apt-get install sublist3r -y
-sudo apt-get install subfinder -y
 
+sudo apt-get install golang -y
+sudo apt-get install eyewitness -y
+sudo apt-get install figlet -y
+sudo apt-get install subfinder -y
 sudo apt-get install assetfinder -y
 sudo apt-get install dnsgen -y
 sudo apt-get install massdns -y
@@ -36,14 +34,8 @@ cd ~/tools/
 
 
 #installing golang
-sudo apt-get install golang -y
+
 if [[ -z "$GOPATH" ]];then
-echo "It looks like go is not installed, installing go lang"
-PS3="Please select an option : "
-choices=("yes" "no")
-select choice in "${choices[@]}"; do
-        case $choice in
-                yes)
 
 					echo "Installing Golang"
 					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
@@ -58,15 +50,7 @@ select choice in "${choices[@]}"; do
 					source ~/.bash_profile
 					sleep 1
 					break
-					;;
-				no)
-					echo "Please install go and rerun this script"
-					echo "Aborting installation..."
-					exit 1
-					;;
-	esac	
-done
-fi
+	fi
 
 
 #install aquatone
